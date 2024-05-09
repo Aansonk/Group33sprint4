@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Comparison - United Tours and Travel Agency</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">United Tours</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white"  href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="bookings.html">Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="comparison.html">Flight Comparison</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Hero Section -->
+        <div class="container my-4">
+            <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+                <h1 class="display-4">Compare your flights!</h1>
+                <p class="lead">Filter according to the airlines attributes. Choose what you need.</p>
+             
+              
+            </div>
+        </div>
+<!-- Main Content Area -->
+<div class="container p-4 p-md-5 mb-4 bg-light">
+    <div class="row">
+        <!-- Sidebar for Filter Options -->
+        <div class="col-md-3 bg-primary p-3">
+            <h5 class="mb-3">Filter Options</h5>
+            <div class="mb-3">
+                <label for="priceRange" class="form-label">Price Range: <span id="priceLabel">$0 - $1000</span></label>
+                <input type="range" class="form-range" min="0" max="1000" value="1000" id="priceRange" oninput="document.getElementById('priceLabel').innerHTML = '$' + this.value;">
+            </div>
+            <div class="mb-3 ">
+                <label for="airlines" class="form-label">Airlines</label>
+                <select multiple class="form-select py-4 m-2" id="airlines">
+                    <option>United Airlines</option>
+                    <option>Delta Airlines</option>
+                    <option>American Airlines</option>
+                    <option>Qatar Airways</option>
+                    <option>Emirates</option>
+                    <option>Fly Dubai</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="stops" class="form-label">Number of Stops</label>
+                <select class="form-select" id="stops">
+                    <option value="0">Non-stop</option>
+                    <option value="1">1 Stop</option>
+                    <option value="2">2+ Stops</option>
+                </select>
+            </div>
+            <button class="btn btn-dark">Apply Filters</button>
+        </div>
+
+        <!-- Main Content Displaying Flight Cards -->
+        <div class="col-md-9">
+            <h5 class="mb-3">Available Flights</h5>
+            <div class="row">
+                <!-- Flight Card Template -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="qatar.jpg" class="card-img-top" alt="Qatar Airways">
+                        <div class="card-body">
+                            <h5 class="card-title">Qatar Airways</h5>
+                            <p class="card-text">Price: $600 - 1 Stop - 10 hrs</p>
+                            <p class="card-text">Airplane Model: Airbus A350</p>
+                            <p class="card-text">Seating Capacity: 283 passengers</p>
+                            <p class="card-text">Cabin Class: Economy, Business</p>
+                            <p class="card-text">Features: In-flight entertainment, Wi-Fi, Onboard meals</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional Flight Cards -->
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="emirates.jpg" class="card-img-top" alt="Emirates">
+                        <div class="card-body">
+                            <h5 class="card-title">Emirates</h5>
+                            <p class="card-text">Price: $650 - Non-stop - 11 hrs</p>
+                            <p class="card-text">Airplane Model: Boeing 777</p>
+                            <p class="card-text">Seating Capacity: 396 passengers</p>
+                            <p class="card-text">Cabin Class: Economy, Business, First Class</p>
+                            <p class="card-text">Features: In-flight entertainment, Wi-Fi, Luxury meals</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="flydubai.jpg" class="card-img-top" alt="Fly Dubai">
+                        <div class="card-body">
+                            <h5 class="card-title">Fly Dubai</h5>
+                            <p class="card-text">Price: $300 - 1 Stop - 7 hrs</p>
+                            <p class="card-text">Airplane Model: Boeing 738</p>
+                            <p class="card-text">Seating Capacity: 162 passengers</p>
+                            <p class="card-text">Cabin Class: Economy, Business</p>
+                            <p class="card-text">Features: In-flight entertainment, Wi-Fi</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="footer mt-5 py-3 bg-dark">
+        <div class="container">
+            <span class="text-white">Follow us on social media for updates and more information.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
